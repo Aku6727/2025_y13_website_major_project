@@ -3,6 +3,7 @@
     font-family: titles;
     src: url(Fonts/Dune_Rise.otf);
 }
+/* General body styles */
 
 
 /* Style the navbar */
@@ -54,4 +55,16 @@
     text-align: center;
     z-index: 2;
   }
+/* Style the blob of text and image */
+.product-image {
+  max-width: 100%;
+}
+.index_custom{
+  margin-left: 100px;  
+}
 
+/* Make the container blend seamlessly */
+.container.bg-dark {
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
