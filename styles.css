@@ -1,0 +1,57 @@
+/* Add custom fonts */
+@font-face {
+    font-family: titles;
+    src: url(Fonts/Dune_Rise.otf);
+}
+
+
+/* Style the navbar */
+.navbar_custom{
+    font-family: titles, Arial, Helvetica, sans-serif ;
+}
+.navbar_custom a,
+.navbar_custom .navbar-brand,
+.navbar_custom .nav-link,
+.navbar_custom .dropdown-menu a,
+.navbar_custom .btn {
+  color: #00DCFF !important;
+}
+
+.navbar_custom .dropdown-menu {
+  background-color: #000;
+}
+/* Frosted glass effect on navbar */
+.navbar_custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+    backdrop-filter: blur(10px) !important;         
+    -webkit-backdrop-filter: blur(10px) !important; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; 
+}
+
+/* Add the main background image */
+.hero_index{
+    margin-top: -100px;
+}
+.background_index_image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+.hero_index h1{
+    font-family: titles, Arial, sans-serif;
+    color: #00DCFF;
+    font-weight: bold;
+}
+.hero_text{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+
