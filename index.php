@@ -23,7 +23,7 @@
     <div class="container bg-dark">
       <div class="row align-items-center">
         <div class="col-md-6 text-center">
-          <img src="images/ultra_lightweight_gaming_mouse.jpg" alt="Gaming Mouse" class="product-image">
+          <img src="images/ultra_lightweight_gaming_mouse.jpg" alt="Gaming Mouse" class="product-image img-fluid">
         </div>
         <div class="col-md-6 text-column">
           <h2 class="mb-4 text-light fst-italic index_custom ">Precision in Your Palm</h2>
@@ -40,6 +40,17 @@
         </div>
       </div>
     </div>
-    
+    <!-- The links to the key pages of the most popular products -->
+    <div class="card bg-dark col-md-4" style="width: 18rem;">
+      <img src="images/iem_pair.jpg" class="card-img-top img-fluid"  alt="Shop headphones">
+      <div class="card-body">
+        <h5 class="card-title bs-dark-text-emphasis text-light">Hadphone/IEMs</h5>
+        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+
+     <?php
+      include("footer.php");
+     ?>
   </body>
 </html>
