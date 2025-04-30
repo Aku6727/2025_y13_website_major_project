@@ -1,0 +1,1 @@
+Database connection failed: Unknown database 'voidtech.db'

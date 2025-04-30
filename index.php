@@ -49,8 +49,8 @@
           <div class="card bg-dark px-5">
             <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
             <div class="card-body">
-              <h5 class="card-title bs-dark-text-emphasis text-light">Headphone/IEMs</h5>
-              <a href="browse.php" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title bs-dark-text-emphasis text-light">Monitors</h5>
+              <a href="browse.php?type_id=3" class="btn btn-primary">Shop</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
             <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
             <div class="card-body">
               <h5 class="card-title bs-dark-text-emphasis text-light">Headphone/IEMs</h5>
-              <a href="browse.php" class="btn btn-primary">Go somewhere</a>
+              <a href="browse.php?type_id=4" class="btn btn-primary">Shop</a>
             </div>
           </div>
         </div>
@@ -69,8 +69,8 @@
           <div class="card bg-dark px-5">
             <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
             <div class="card-body">
-              <h5 class="card-title bs-dark-text-emphasis text-light">Headphone/IEMs</h5>
-              <a href="browse.php" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title bs-dark-text-emphasis text-light">Mice</h5>
+              <a href="browse.php?type_id=1" class="btn btn-primary">Shop</a>
             </div>
           </div>
         </div>
@@ -79,8 +79,8 @@
           <div class="card bg-dark px-5">
             <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
             <div class="card-body">
-              <h5 class="card-title bs-dark-text-emphasis text-light">Headphone/IEMs</h5>
-              <a href="browse.php" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title bs-dark-text-emphasis text-light">Keyboards</h5>
+              <a href="browse.php?type_id=2" class="btn btn-primary">Shop</a>
             </div>
           </div>
         </div>
