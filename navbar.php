@@ -12,11 +12,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" href="index.php">Home</a>
         </li>
-
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="browse.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Browse
           </a>
           <ul class="dropdown-menu">
@@ -28,12 +27,11 @@
               while ($item_rs = mysqli_fetch_assoc($item_query)) {
                   $item_id = $item_rs["type_id"];
                   $item_name = $item_rs["product_type"];
-                  echo "<li><a class='dropdown-item m-auto' href='browse.php?type_id=$item_id'>$item_name</a></li>";
+                  echo "<li><a class='dropdown-item' href='browse.php?type_id=$item_id'>$item_name</a></li>";
               }
             ?>
           </ul>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="log_in.php">Support</a>
         </li>
@@ -42,10 +40,9 @@
         </li>
       </ul>
 
-      <!-- Search Form -->
       <form class="d-flex align-items-start" method="POST" action="browse.php" role="search">
         <div class="d-flex flex-column me-3">
-          <input class="form-control mb-2" name="part_searched" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control mb-2" name="part_searched" type="search" placeholder="Search" required>
 
           <div class="search-options d-flex gap-3">
             <div>
@@ -58,11 +55,10 @@
             </div>
             <div>
               <input type="radio" name="table_search" value="connection" id="connection">
-              <label for="connection">Connection type</label>
+              <label for="connection">Connection Type</label>
             </div>
           </div>
         </div>
-
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
