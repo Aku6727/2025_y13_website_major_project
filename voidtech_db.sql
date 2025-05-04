@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 28, 2025 at 08:28 PM
+-- Generation Time: May 04, 2025 at 10:13 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.3.1
 
@@ -31,6 +31,15 @@ CREATE TABLE `connection` (
   `connection_id` int(11) NOT NULL,
   `connection_type` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `connection`
+--
+
+INSERT INTO `connection` (`connection_id`, `connection_type`) VALUES
+(1, 'Wired'),
+(2, 'Wireless'),
+(3, 'Dongle');
 
 -- --------------------------------------------------------
 
@@ -79,36 +88,36 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `prod_name`, `type_id`, `price`, `manufacturer_id`, `weight`, `connection_id`, `image`) VALUES
-(1, 'ViewEdge Elite 2024 Keyboard', 1, 830, 3, 1, 3, 'product_1.jpg'),
-(2, 'RazerTech Max 2025 Headset', 8, 298, 2, 3, 3, 'product_2.jpg'),
-(3, 'PixelPeak Fusion V4 Headset', 6, 262, 7, 3, 3, 'product_3.jpg'),
-(4, 'NeoGear Xtreme V1 Speaker', 4, 487, 8, 6, 4, 'product_4.jpg'),
-(5, 'PixelPeak Xtreme V4 Docking Station', 6, 158, 7, 2, 1, 'product_5.jpg'),
-(6, 'LogiCore Quantum 2024 Microphone', 3, 776, 7, 4, 3, 'product_6.jpg'),
-(7, 'NeoGear Ultralight V3 Speaker', 4, 592, 1, 5, 3, 'product_7.jpg'),
-(8, 'HyperZone Elite 2025 Webcam', 3, 677, 7, 5, 3, 'product_8.jpg'),
-(9, 'PixelPeak Elite 2025 Monitor', 3, 266, 8, 6, 2, 'product_9.jpg'),
-(10, 'PixelPeak Stealth 2024 Monitor', 7, 670, 2, 5, 4, 'product_10.jpg'),
-(11, 'PixelPeak Ultralight 2024 Speaker', 4, 109, 5, 4, 3, 'product_11.jpg'),
-(12, 'NeoGear Stealth 2024 Webcam', 7, 425, 7, 5, 1, 'product_12.jpg'),
-(13, 'ViewEdge Quantum V3 Keyboard', 1, 759, 6, 3, 3, 'product_13.jpg'),
-(14, 'NeoGear Elite 2025 Monitor', 1, 124, 7, 0, 3, 'product_14.jpg'),
-(15, 'PixelPeak Ultralight V4 Monitor', 7, 803, 3, 4, 4, 'product_15.jpg'),
-(16, 'TechNova Turbo 2025 Monitor', 3, 583, 1, 7, 1, 'product_16.jpg'),
-(17, 'HyperZone Turbo V4 Mouse', 5, 606, 6, 3, 4, 'product_17.jpg'),
-(18, 'HyperZone Ultralight 2024 Keyboard', 8, 517, 1, 4, 2, 'product_18.jpg'),
-(19, 'PixelPeak Stealth V3 Mouse', 6, 309, 2, 2, 2, 'product_19.jpg'),
-(20, 'TechNova Turbo V4 Mouse', 8, 850, 6, 3, 3, 'product_20.jpg'),
+(1, 'ViewEdge Elite 2024 Keyboard', 2, 830, 3, 1, 3, 'product_1.jpg'),
+(2, 'RazerTech Max 2025 Headset', 4, 298, 2, 3, 3, 'product_2.jpg'),
+(3, 'PixelPeak Fusion V4 Headset', 4, 262, 7, 3, 3, 'product_3.jpg'),
+(4, 'NeoGear Xtreme V1 Speaker', 6, 487, 8, 6, 2, 'product_4.jpg'),
+(5, 'PixelPeak Xtreme V4 Docking Station', 8, 158, 7, 2, 2, 'product_5.jpg'),
+(6, 'LogiCore Quantum 2024 Microphone', 7, 776, 1, 4, 3, 'product_6.jpg'),
+(7, 'NeoGear Ultralight V3 Speaker', 6, 592, 8, 5, 3, 'product_7.jpg'),
+(8, 'HyperZone Elite 2025 Webcam', 5, 677, 4, 5, 1, 'product_8.jpg'),
+(9, 'PixelPeak Elite 2025 Monitor', 3, 266, 7, 6, 1, 'product_9.jpg'),
+(10, 'PixelPeak Stealth 2024 Monitor', 3, 670, 7, 5, 1, 'product_10.jpg'),
+(11, 'PixelPeak Ultralight 2024 Speaker', 6, 109, 7, 4, 3, 'product_11.jpg'),
+(12, 'NeoGear Stealth 2024 Webcam', 5, 425, 8, 5, 1, 'product_12.jpg'),
+(13, 'ViewEdge Quantum V3 Keyboard', 2, 759, 3, 3, 3, 'product_13.jpg'),
+(14, 'NeoGear Elite 2025 Monitor', 3, 124, 8, 0, 1, 'product_14.jpg'),
+(15, 'PixelPeak Ultralight V4 Monitor', 3, 803, 7, 4, 1, 'product_15.jpg'),
+(16, 'TechNova Turbo 2025 Monitor', 3, 583, 5, 7, 1, 'product_16.jpg'),
+(17, 'HyperZone Turbo V4 Mouse', 1, 606, 4, 3, 2, 'product_17.jpg'),
+(18, 'HyperZone Ultralight 2024 Keyboard', 2, 517, 4, 4, 2, 'product_18.jpg'),
+(19, 'PixelPeak Stealth V3 Mouse', 1, 309, 7, 2, 2, 'product_19.jpg'),
+(20, 'TechNova Turbo V4 Mouse', 1, 850, 5, 3, 3, 'product_20.jpg'),
 (21, 'SoundBlitz Quantum V3 Microphone', 7, 399, 6, 3, 1, 'product_21.jpg'),
-(22, 'PixelPeak Ultralight V3 Webcam', 4, 227, 8, 6, 2, 'product_22.jpg'),
-(23, 'TechNova Elite 2024 Microphone', 2, 813, 6, 3, 2, 'product_23.jpg'),
-(24, 'SoundBlitz Turbo V2 Webcam', 3, 682, 3, 2, 2, 'product_24.jpg'),
-(25, 'NeoGear Elite V2 Webcam', 4, 565, 4, 1, 3, 'product_25.jpg'),
-(26, 'NeoGear Fusion 2025 Monitor', 5, 265, 3, 1, 2, 'product_26.jpg'),
-(27, 'SoundBlitz Max 2025 Webcam', 1, 723, 6, 4, 4, 'product_27.jpg'),
-(28, 'TechNova Xtreme V4 Webcam', 4, 53, 7, 1, 1, 'product_28.jpg'),
-(29, 'ViewEdge Quantum 2025 Speaker', 3, 708, 3, 3, 3, 'product_29.jpg'),
-(30, 'NeoGear Max V4 Docking Station', 4, 747, 7, 1, 2, 'product_30.jpg');
+(22, 'PixelPeak Ultralight V3 Webcam', 5, 227, 7, 6, 1, 'product_22.jpg'),
+(23, 'TechNova Elite 2024 Microphone', 7, 813, 5, 3, 2, 'product_23.jpg'),
+(24, 'SoundBlitz Turbo V2 Webcam', 5, 682, 6, 2, 2, 'product_24.jpg'),
+(25, 'NeoGear Elite V2 Webcam', 5, 565, 8, 1, 3, 'product_25.jpg'),
+(26, 'NeoGear Fusion 2025 Monitor', 3, 265, 8, 1, 1, 'product_26.jpg'),
+(27, 'SoundBlitz Max 2025 Webcam', 5, 723, 6, 4, 1, 'product_27.jpg'),
+(28, 'TechNova Xtreme V4 Webcam', 5, 53, 5, 1, 1, 'product_28.jpg'),
+(29, 'ViewEdge Quantum 2025 Speaker', 6, 708, 3, 3, 3, 'product_29.jpg'),
+(30, 'NeoGear Max V4 Docking Station', 8, 747, 8, 1, 1, 'product_30.jpg');
 
 -- --------------------------------------------------------
 
@@ -171,7 +180,7 @@ ALTER TABLE `product_type`
 -- AUTO_INCREMENT for table `connection`
 --
 ALTER TABLE `connection`
-  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `manufacturer`
