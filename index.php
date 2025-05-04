@@ -68,7 +68,7 @@
 
           <div class = "col-sm-6 col-md-4 col-lg-3">
             <div class="card bg-dark px-5">
-              <img src="images/gaming_mouse_rgb.jpg" class="card-img-top img-fluid" alt="Shop Mice">
+              <img src="images/simple_gaming_mouse.jpg" class="card-img-top img-fluid" alt="Shop Mice">
               <div class="card-body">
                 <h5 class="card-title bs-dark-text-emphasis text-light">Mice</h5>
                 <a href="browse.php?type_id=1" class="btn btn-primary">Shop</a>
