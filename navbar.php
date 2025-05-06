@@ -46,7 +46,7 @@
 
           <div class="search-options d-flex gap-3">
             <div>
-              <input type="radio" name="table_search" value="products" id="name" required>
+              <input type="radio" name="table_search" value="products" id="name" checked>
               <label for="name">Name</label>
             </div>
             <div>
