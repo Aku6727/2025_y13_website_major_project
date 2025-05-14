@@ -109,21 +109,22 @@ $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error
   </h2>
 
   <?php if (mysqli_num_rows($result) > 0): ?>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <div class="col">
-          <div class="card h-100">
-            <img src="<?= htmlspecialchars($row['image']) ?>" class="card-img-top" alt="<?= htmlspecialchars($row['prod_name']) ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?= htmlspecialchars($row['prod_name']) ?></h5>
-              <p class="card-text">Type: <?= htmlspecialchars($row['product_type']) ?></p>
-              <p class="card-text">Price: $<?= number_format($row['price'], 2) ?></p>
-              <a href="product.php?id=<?= $row['id'] ?>" class="btn btn-primary">View Details</a>
-            </div>
+    <<div class="row row-cols-1 row-cols-md-3 g-4">
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/<?= htmlspecialchars($row['image']) ?>"
+              class="card-img-top" alt="<?= htmlspecialchars($row['prod_name']) ?>">
+          <div class="card-body">
+            <h5 class="card-title"><?= htmlspecialchars($row['prod_name']) ?></h5>
+            <p class="card-text">Type: <?= htmlspecialchars($row['product_type']) ?></p>
+            <p class="card-text">Price: $<?= number_format($row['price'],2) ?></p>
+            <a href="product.php?id=<?= $row['id'] ?>" class="btn btn-primary">View Details</a>
           </div>
         </div>
-      <?php endwhile; ?>
-    </div>
+      </div>
+    <?php endwhile; ?>
+  </div>
   <?php else: ?>
     <p>No products found.</p>
   <?php endif; ?>
