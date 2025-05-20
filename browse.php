@@ -119,7 +119,7 @@ $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error
             <h5 class="card-title"><?= htmlspecialchars($row['prod_name']) ?></h5>
             <p class="card-text">Type: <?= htmlspecialchars($row['product_type']) ?></p>
             <p class="card-text">Price: $<?= number_format($row['price'],2) ?></p>
-            <a href="product.php?id=<?= $row['id'] ?>" class="btn btn-primary">View Details</a>
+            <a href="product.php?part_id=<?= $row['id'] ?>" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </div>
