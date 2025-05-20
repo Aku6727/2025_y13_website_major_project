@@ -1,5 +1,5 @@
 <?php include('db_connect.php'); ?>
-<nav class="navbar navbar-expand-lg navbar_custom" data-bs-theme="dark">
+<nav class="navbar navbar-expand-xxl navbar_custom" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand company_name" href="index.php">Voidtech</a>
 
@@ -36,7 +36,7 @@
           <a class="nav-link" href="log_in.php">Support</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="log_in.php">Log in/Sign up</a>
+          <a class="nav-link" href="log_in.php">Log-In</a>
         </li>
       </ul>
 

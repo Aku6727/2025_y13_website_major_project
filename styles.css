@@ -100,9 +100,14 @@
 .footer_custom a:hover {
   text-decoration: underline;
 }
-
+/* Media queries to make the pages resize nicely */
 @media screen and (max-width: 1000px) {
   .image_and_blurb{
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .search-options {
     display: none;
   }
 }
