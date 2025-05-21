@@ -112,7 +112,7 @@ $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error
     <<div class="row row-cols-1 row-cols-md-3 g-4">
     <?php while ($row = mysqli_fetch_assoc($result)): ?>
       <div class="col">
-        <div class="card h-100">
+        <div class="card h-100 bg-secondary text-light">
           <img src="images/<?= htmlspecialchars($row['image']) ?>"
               class="card-img-top" alt="<?= htmlspecialchars($row['prod_name']) ?>">
           <div class="card-body">
