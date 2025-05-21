@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="log_in.php">Support</a>
+          <a class="nav-link" href="account.php">Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="log_in.php">Log-In</a>
