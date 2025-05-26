@@ -1,13 +1,16 @@
 <?php
-    // Connect to the database
-    $dbconnect = mysqli_connect("localhost", "root", "root", "voidtech.db");
 
-    // Check the connection
-    if (mysqli_connect_errno()) {
-        // Log the error to a file
-        error_log("Database connection failed: " . mysqli_connect_error(), 3, "error_log.txt");
 
-        // Display a user-friendly message
-        echo "<p>Database connection unsuccesfull, please try again later</p>";
-    }
-?>
+  $servername = "mysqlforest.hosts.net.nz";
+  $username = "stacd342_user";
+  $password = "@gidnUp4";
+  $dbname = "stacd342_voidtech";
+
+  // Create connection
+  $dbconnect = new mysqli($servername, $username, $password, $dbname);
+
+  // Check connection
+  if ($dbconnect->connect_error) {
+    die("Connection failed: " . $dbconnect->connect_error);
+  }
+ ?>

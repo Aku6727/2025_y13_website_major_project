@@ -13,6 +13,7 @@
     <?php
         include('db_connect.php');
         include('navbar.php');
+        session_start();
     ?>
     
     <!-- Execute the query -->
@@ -55,7 +56,7 @@
                                         <li><strong>Connection via:</strong> <?php echo $item_rs['connection_type']; ?></li>
                                     </ul>
                                     <!-- Add to cart button -->
-                                   <a href="account.php?part_id=<?php $item_rs['id'] ?>" class="btn btn-primary">Add to cart</a>
+                                   <a href="add_to_cart.php?prod_id=<?php $item_rs['id'] ?>" class="btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>
