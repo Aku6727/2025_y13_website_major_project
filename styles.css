@@ -197,3 +197,9 @@
     color: #00DCFF !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* Cart customisation */
+.cart_container{
+   padding-top: 100px  !important; 
+  padding-bottom: 150px !important;
+
+}
