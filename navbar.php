@@ -33,10 +33,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="account.php">Cart</a>
+          <a class="nav-link" href="cart.php">Cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="log_in.php">Log-In</a>
+          <a class="nav-link" href="account.php">Log-In</a>
         </li>
       </ul>
 

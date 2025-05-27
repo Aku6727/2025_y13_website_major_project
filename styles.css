@@ -158,7 +158,7 @@
 
 /* Card Customizations */
 .card-body {
-    padding: 3rem; /* Increase padding to give more space to text */
+    padding: 3rem; 
 }
 
 .card-title {

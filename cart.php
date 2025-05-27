@@ -59,10 +59,7 @@ if (isset($_GET['remove_id'])) {
       <div class="card mb-3 cart-card bg-secondary text-light">
         <div class="row g-0">
           <div class="col-auto">
-            <img src="images/<?php echo htmlspecialchars($row['image']); ?>"
-                 class="img-fluid cart-card-img"
-                 style="max-height:200px;"  <!-- you can tweak max-height -->
-                 alt="<?php echo htmlspecialchars($row['prod_name']); ?>">
+            <img src="images/<?php echo $row['image']; ?>" style="max-height:300px; width: auto; margin-left: 10px; justify-content: center;" alt="<?php echo $row['prod_name']; ?>">
           </div>
           <div class="col">
             <div class="card-body">
@@ -72,7 +69,7 @@ if (isset($_GET['remove_id'])) {
               <p class="card-text">Quantity: <?php echo $qty; ?></p>
               <p class="card-text mb-3">Subtotal: $<?php echo number_format($subtotal,2); ?></p>
               <a href="cart.php?remove_id=<?php echo $row['id']; ?>"
-                 class="btn btn-sm btn-outline-danger">
+                 class="btn btn-sm btn-outline-danger bg-danger text-light">
                 Remove
               </a>
             </div>
