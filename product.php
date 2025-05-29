@@ -52,7 +52,7 @@ include('navbar.php');
                 <li><strong>Weight Category:</strong> <?php echo htmlspecialchars($item_rs['weight']); ?>GB</li>
                 <li><strong>Connection via:</strong> <?php echo htmlspecialchars($item_rs['connection_type']); ?></li>
               </ul>
-              <a href="add_to_cart.php?prod_id=<?php echo $item_rs['id']; ?>" class="btn btn-primary">
+              <a href="add_to_cart.php?prod_id=<?php echo $item_rs['id']; ?>&qty=1" class="btn btn-primary">
                 Add to cart
               </a>
             </div>

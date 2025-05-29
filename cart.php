@@ -2,14 +2,6 @@
 session_start();
 include('db_connect.php');
 include('navbar.php');
-
-// “remove from cart”
-if (isset($_GET['remove_id'])) {
-    $rid = (int)$_GET['remove_id'];
-    unset($_SESSION['trolley'][$rid]);
-    header('Location: cart.php');
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +12,11 @@ if (isset($_GET['remove_id'])) {
   <link rel="stylesheet" href="styles.css">
   <title>Cart</title>
   <style>
-    /* make image hug the card’s full height, width auto */
     .cart-card-img {
       height: 100%;
       width: auto;
       object-fit: cover;
     }
-    /* ensure the card body and img column stretch to same height */
     .cart-card .row {
       align-items: center;
     }
@@ -36,6 +26,7 @@ if (isset($_GET['remove_id'])) {
   <div class="cart_container container cart_container">
     <h1>Your Cart</h1>
 
+<!-- Process the trolley array and seperate quantity and product ids -->
     <?php if (empty($_SESSION['trolley'])): ?>
       <p>Your cart is empty.</p>
     <?php else:
@@ -56,6 +47,7 @@ if (isset($_GET['remove_id'])) {
           $subtotal = $row['price'] * $qty;
           $total   += $subtotal;
     ?>
+      <!-- Display 1 item including quantity, subtotal etc. -->
       <div class="card mb-3 cart-card bg-secondary text-light">
         <div class="row g-0">
           <div class="col-auto">
@@ -63,15 +55,41 @@ if (isset($_GET['remove_id'])) {
           </div>
           <div class="col">
             <div class="card-body">
-              <h3 class="card-title"><?php echo htmlspecialchars($row['prod_name']); ?></h3>
-              <p class="card-text">Type: <?php echo htmlspecialchars($row['product_type']); ?></p>
+              <h3 class="card-title"><?php echo $row['prod_name']; ?></h3>
+              <p class="card-text">Type: <?php echo $row['product_type']; ?></p>
               <p class="card-text">Price: $<?php echo number_format($row['price'],2); ?></p>
-              <p class="card-text">Quantity: <?php echo $qty; ?></p>
+              <!-- Input to adjust Quantity -->
+              <div class = "form-floating">
+                <form method="POST" action="add_to_cart.php">
+                  <input type="hidden" name="prod_id" value="<?php echo $row['id']; ?>">
+                  <input type="number" name="qty" value="<?php echo $qty; ?>" min="0">
+                  <button class="btn btn-outline-success btn-primary" type="submit">Update</button>
+                </form>
+              </div>
               <p class="card-text mb-3">Subtotal: $<?php echo number_format($subtotal,2); ?></p>
-              <a href="cart.php?remove_id=<?php echo $row['id']; ?>"
-                 class="btn btn-sm btn-outline-danger bg-danger text-light">
+              <!-- Button to activate modal -->
+              <button type="button" class="btn btn-primary bg-danger text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Remove
-              </a>
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Remove from cart?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you sure you want to remove this from your cart?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <a href="cart.php?remove_id=<?php echo $row['id']; ?>" class="btn btn-sm btn-outline-danger bg-danger text-light"> Remove </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -79,7 +97,7 @@ if (isset($_GET['remove_id'])) {
     <?php
         endwhile;
         echo "<h2>Total: $" . number_format($total,2) . "</h2>";
-        echo '<form action="account.php" method="post"><button class="btn btn-primary" type="submit">Checkout</button></form>';
+        echo '<form action="account.php" method="post"><button class="btn bg-success text-light" type="submit">Checkout</button></form>';
       else:
         echo "<p>There was a problem loading your cart items.</p>";
       endif;
