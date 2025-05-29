@@ -85,7 +85,7 @@ include('navbar.php');
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <a href="cart.php?remove_id=<?php echo $row['id']; ?>" class="btn btn-sm btn-outline-danger bg-danger text-light"> Remove </a>
+                      <a href="add_to_cart.php?remove_id=<?php echo $row['id']; ?>" class="btn btn-sm btn-outline-danger bg-danger text-light"> Remove </a>
                     </div>
                   </div>
                 </div>

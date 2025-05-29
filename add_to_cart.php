@@ -27,7 +27,7 @@ elseif (isset($_GET['prod_id']) && isset($_GET['qty'])) {
 }
 // Adjust quantity of an item already in cart
 elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-     if (!empty($_POST['prod_id']) && !empty($_POST['qty'])) {
+     if (isset($_POST['prod_id']) && isset($_POST['qty'])) {
         $prod_id = (int) $_POST['prod_id'];
         $prod_quant = (int) $_POST['qty'];
         // handle for if the quantity is 0
