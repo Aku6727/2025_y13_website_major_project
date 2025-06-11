@@ -1,4 +1,6 @@
-<?php include('db_connect.php'); ?>
+<?php include('db_connect.php'); 
+  session_start();
+?>
 <nav class="navbar navbar-expand-xxl navbar_custom" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand company_name" href="index.php">Voidtech</a>
@@ -36,7 +38,14 @@
           <a class="nav-link" href="cart.php">Cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="account.php">Log-In</a>
+          <?php
+          if (!isset($_SESSION['user'])){
+            echo "<a class='nav-link' href='account.php'>Log-In</a>";
+            }
+          else {
+            echo "<a class='nav-link' href='verify_acc.php?action=log-out''>Log-out</a>";
+          }
+          ?>
         </li>
       </ul>
 
