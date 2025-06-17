@@ -15,9 +15,9 @@ elseif (isset($_SESSION['user'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
     // SIGN UP 
-    if (isset($_POST['signup'])) {
-        $new_user = mysqli_real_escape_string($dbconnect, $_POST['user']);
-        $new_pass = $_POST['pass'];
+    if (isset($_POST['new_email'], $_POST['create-pass'])) {
+        $new_user = mysqli_real_escape_string($dbconnect, $_POST['new_email']);
+        $new_pass = $_POST['create-pass'];
         
         if ($new_user && $new_pass) {
             $hash = password_hash($new_pass, PASSWORD_DEFAULT);
@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } else {
             echo "Please fill in both username and password.";
+            echo "User: $new_user. Password: $new_pass";
         }
         exit();
     }

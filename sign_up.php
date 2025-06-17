@@ -18,10 +18,11 @@
     <div class="card text-bg-dark shadow-lg" style="max-width: 400px; width: 100%;">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Sign Up</h2>
+        
         <form method="POST" action="verify_acc.php">
           <div class="mb-3">
             <label for="user" class="form-label">Email</label>
-            <input type="email" name="email" id="user" class="form-control form-control-lg" required>
+            <input type="email" name="new_email" id="user" class="form-control form-control-lg" required>
           </div>
           <div class="mb-4">
             <label for="pass" class="form-label">Password</label>
