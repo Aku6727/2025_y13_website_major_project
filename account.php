@@ -1,9 +1,11 @@
 <?php
+// Include the necessary files and start the session
     include('db_connect.php');
     include('navbar.php');
     session_start();
+// Check is the user is already logged in
     if (isset($_SESSION['user'])) {
-        header('Location: orders.php?user_id=' . $_SESSION['user']);
+        header('Location: checkout.php?user_id=' . $_SESSION['user']);
         exit;
     }
 ?>
@@ -17,11 +19,12 @@
   <title>Log In</title>
 </head>
 <body class="bg-dark text-light">
-
+<!-- Container for log in form -->
   <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="card text-bg-dark" style="max-width: 400px; width: 100%;">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Log In</h2>
+        <!-- Log in form -->
         <form method="POST" action="verify_acc.php">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -34,13 +37,14 @@
           </div>
           <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
+        <!-- Link to sign up -->
         <p class="text-center mt-3">
           Or <a href="sign_up.php" class="link-primary">Sign Up</a>
         </p>
       </div>
     </div>
   </div>
-
+<!-- Include footer -->
   <?php include('footer.php'); ?>
 </body>
 </html>

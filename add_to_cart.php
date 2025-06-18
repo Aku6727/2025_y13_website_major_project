@@ -37,18 +37,19 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: cart.php');
             exit;
         }
-
+        // If the trolley is not set, create it
         if (!isset($_SESSION['trolley'])) {
             $_SESSION['trolley'] = [];
         }
+        // If the product is already in the trolley, update the quantity
         if (isset($_SESSION['trolley'][$prod_id])) {
             $_SESSION['trolley'][$prod_id] = $prod_quant;
         }
-
+        // If the product is not in the trolley, add it
         } else {
             $_SESSION['trolley'][$prod_id] = $prod_quant; 
         }
-
+        // Redirect to cart page
         header('Location: cart.php');
         exit;
      }

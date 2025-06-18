@@ -45,7 +45,7 @@
       <!-- The links to the key pages of the most popular products -->
       <div class = "container-fluid mb-auto pb-5">
         <div class="row">
-
+          <!-- Link to the monitors -->
           <div class = "col-sm-6 col-md-4 col-lg-3">
             <div class="card bg-dark px-5">
               <img src="images/A_digital_photograph_features_a_widescreen_gaming_.jpg" class="card-img-top img-fluid" alt="Shop Monitors">
@@ -55,7 +55,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Link to the headphones -->
           <div class = "col-sm-6 col-md-4 col-lg-3">
             <div class="card bg-dark px-5">
               <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Link to the mice -->
           <div class = "col-sm-6 col-md-4 col-lg-3">
             <div class="card bg-dark px-5">
               <img src="images/simple_gaming_mouse.jpg" class="card-img-top img-fluid" alt="Shop Mice">
@@ -75,7 +75,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Link to the keyboards -->
           <div class = "col-sm-6 col-md-4 col-lg-3">
             <div class="card bg-dark px-5">
               <img src="images/simple_black_blue_keyboard.jpg" class="card-img-top img-fluid" alt="Shop keyboards">
@@ -89,7 +89,7 @@
         </div>
       </div>
     </main>
-
+    <!-- Include the footer -->
      <?php
       include("footer.php");
      ?>

@@ -14,6 +14,7 @@ include('navbar.php');
 </head>
 <body class="bg-dark text-light">
   <?php 
+    // Check if a product ID is provided in the URL via GET request
     $item_chosen = isset($_GET['part_id']) ? intval($_GET['part_id']) : null;
     if (!is_null($item_chosen)) {  
       $item_sql = "
@@ -25,10 +26,12 @@ include('navbar.php');
         INNER JOIN connection c ON p.connection_id = c.connection_id
         WHERE p.id = $item_chosen
       ";
+      // Run sql query to fetch product details
       $item_query = mysqli_query($dbconnect, $item_sql);
       if ($item_query && mysqli_num_rows($item_query) > 0) {
         $item_rs = mysqli_fetch_assoc($item_query);
   ?>
+        <!-- Product details section -->
     <div class="container product-container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-7">
@@ -37,6 +40,7 @@ include('navbar.php');
                  class="img-fluid" alt="item image">
           </div>
         </div>
+        <!-- Display item details -->
         <div class="col-lg-6 col-md-5">
           <div class="card border-0 shadow-lg bg-dark text-light">
             <div class="card-body">
@@ -46,12 +50,14 @@ include('navbar.php');
                 meticulously crafted for peak performance and durability. …  
               </p>
               <ul class="list-unstyled">
+                <!-- Item specs breakdown -->
                 <li><strong>Type:</strong> <?php echo htmlspecialchars($item_rs['product_type']); ?></li>
                 <li><strong>Price:</strong> $<?php echo number_format($item_rs['price'], 2); ?></li>
                 <li><strong>Manufacturer:</strong> <?php echo htmlspecialchars($item_rs['manufacturer_name']); ?></li>
                 <li><strong>Weight Category:</strong> <?php echo htmlspecialchars($item_rs['weight']); ?>GB</li>
                 <li><strong>Connection via:</strong> <?php echo htmlspecialchars($item_rs['connection_type']); ?></li>
               </ul>
+              <!-- Add to cart link -->
               <a href="add_to_cart.php?prod_id=<?php echo $item_rs['id']; ?>&qty=1" class="btn btn-primary">
                 Add to cart
               </a>
@@ -61,13 +67,14 @@ include('navbar.php');
       </div>
     </div>
   <?php
+    // Error code
       } else {
         echo "<p>Error: No results found.</p>";
       }
     } else {
       echo "<p>Error, please try again later or contact our support team.</p>";
     }
-
+  // Include the footer
     include('footer.php');
   ?>
 </body>

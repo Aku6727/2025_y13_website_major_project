@@ -5,7 +5,7 @@
     <ul class="list-inline">
       <li class="list-inline-item"><a href="index.php">Home</a></li>
       <li class="list-inline-item"><a href="browse.php">Shop</a></li>
-      <li class="list-inline-item"><a href="support.php">Support</a></li>
+      <li class="list-inline-item"><a href="cart.php">Cart</a></li>
     </ul>
   </div>
 </footer>
