@@ -50,7 +50,7 @@
             <div class="card bg-dark px-5">
               <img src="images/A_digital_photograph_features_a_widescreen_gaming_.jpg" class="card-img-top img-fluid" alt="Shop Monitors">
               <div class="card-body">
-                <h5 class="card-title bs-dark-text-emphasis text-light">Monitors</h5>
+                <h5 class="card-title-custom bs-dark-text-emphasis text-light">Monitors</h5>
                 <a href="browse.php?type_id=3" class="btn btn-primary">Shop</a>
               </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="card bg-dark px-5">
               <img src="images/iem_pair.jpg" class="card-img-top img-fluid" alt="Shop headphones">
               <div class="card-body">
-                <h5 class="card-title bs-dark-text-emphasis text-light">Headphone/IEMs</h5>
+                <h5 class="card-title-custom bs-dark-text-emphasis text-light">Headphones</h5>
                 <a href="browse.php?type_id=4" class="btn btn-primary">Shop</a>
               </div>
             </div>
@@ -70,7 +70,7 @@
             <div class="card bg-dark px-5">
               <img src="images/simple_gaming_mouse.jpg" class="card-img-top img-fluid" alt="Shop Mice">
               <div class="card-body">
-                <h5 class="card-title bs-dark-text-emphasis text-light">Mice</h5>
+                <h5 class="card-title-custom bs-dark-text-emphasis text-light">Mice</h5>
                 <a href="browse.php?type_id=1" class="btn btn-primary">Shop</a>
               </div>
             </div>
@@ -80,7 +80,7 @@
             <div class="card bg-dark px-5">
               <img src="images/simple_black_blue_keyboard.jpg" class="card-img-top img-fluid" alt="Shop keyboards">
               <div class="card-body">
-                <h5 class="card-title bs-dark-text-emphasis text-light">Keyboards</h5>
+                <h5 class="card-title-custom bs-dark-text-emphasis text-light">Keyboards</h5>
                 <a href="browse.php?type_id=2" class="btn btn-primary">Shop</a>
               </div>
             </div>
@@ -89,7 +89,7 @@
         </div>
       </div>
     </main>
-    <!-- Include the footer -->
+
      <?php
       include("footer.php");
      ?>

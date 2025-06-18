@@ -83,10 +83,6 @@
     padding-bottom: 100px;
 }
 
-.card-title {
-  font-size: 1.5rem !important;    
-}
-
 /* customising the footer */
 .footer_custom {
   font-family: titles, Arial, Helvetica, sans-serif;
@@ -170,8 +166,7 @@
     font-family: titles, Arial, Helvetica, sans-serif;
     color: #00DCFF;
     font-weight: bold;
-    font-size: 1.5rem !important;
-}
+  }
 
 .card-text {
     font-size: 1.1rem;
@@ -207,5 +202,10 @@
 .cart_container{
    padding-top: 100px  !important; 
   padding-bottom: 150px !important;
+
+}
+/* Styling the card titles on the index page */
+.h5, h5 {
+    white-space: nowrap !important;
 
 }
