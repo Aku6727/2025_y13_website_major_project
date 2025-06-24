@@ -106,6 +106,9 @@
   .image_and_blurb{
     display: none;
   }
+  .table, table {
+  background-color: red; 
+ }
 }
 @media screen and (max-width: 1000px) {
   .search-options {

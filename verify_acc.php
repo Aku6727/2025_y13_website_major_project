@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             } else {
                 echo "Incorrect password.";
+                header('Location: account.php');
             }
         } else {
             echo "User not found.";

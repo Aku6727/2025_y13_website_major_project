@@ -46,10 +46,14 @@
           // If user is not logged in, show log-in link
           if (!isset($_SESSION['user'])){
             echo "<a class='nav-link' href='account.php'>Log-In</a>";
+            echo "</li>";
             }
           // If user is logged in, show log-out link
           else {
             echo "<a class='nav-link' href='verify_acc.php?action=log-out''>Log-out</a>";
+            echo "</li>";
+            echo "<li class = 'nav item'>";
+            echo "<a class='nav-link' href='orders.php'>My Orders</a>";
           }
           ?>
         </li>
