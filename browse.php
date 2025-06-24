@@ -116,7 +116,7 @@ $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error
           <img src="images/<?= htmlspecialchars($row['image']) ?>"
               class="card-img-top" alt="<?= htmlspecialchars($row['prod_name']) ?>">
           <div class="card-body">
-            <h5 class="card-title"><?= htmlspecialchars($row['prod_name']) ?></h5>
+            <h4 class="card-title"><?= htmlspecialchars($row['prod_name']) ?></h4>
             <p class="card-text">Type: <?= htmlspecialchars($row['product_type']) ?></p>
             <p class="card-text">Price: $<?= number_format($row['price'],2) ?></p>
             <a href="product.php?part_id=<?= $row['id'] ?>" class="btn btn-primary">View Details</a>

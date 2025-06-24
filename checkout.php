@@ -11,6 +11,7 @@
     }
     // Set the user session variable
     $user_id = $_SESSION['user_id'];
+    echo $user_id;
 
     //Insert new order
     $order_query = "INSERT INTO orders (user_id) VALUES ($user_id)";
