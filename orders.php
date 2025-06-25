@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_assoc($res)) {
           </div>
           <div class="card-body">
             <!-- Mobile dropdown -->
-            <div class="dropdown d-block d-md-none mb-3">
+            <div class="dropdown d-block d-md-none mb-3 text-center">
               <button
                 class="btn btn-primary dropdown-toggle"
                 type="button"
@@ -89,13 +89,17 @@ while ($row = mysqli_fetch_assoc($res)) {
                 aria-labelledby="orderDropdown-<?= $oid ?>"
               >
                 <?php foreach ($order['items'] as $item): ?>
-                  <li class="dropdown-item">
+                  <li class="dropdown-item text-dark">
                     <?= htmlspecialchars($item['prod_name']) ?>
                     — Qty: <?= (int)$item['quant'] ?>
                     — $<?= number_format($item['subtotal'], 2) ?>
                   </li>
                 <?php endforeach; ?>
               </ul>
+            </div>
+            <!-- Display total for portrait -->
+            <div class="text-center fw-bold d-md-none mb-3 mt-5">
+              Order Total: $<?= number_format($order['total'], 2) ?>
             </div>
 
             <!-- Desktop table -->
@@ -131,8 +135,8 @@ while ($row = mysqli_fetch_assoc($res)) {
                 <?php endforeach; ?>
               </tbody>
             </table>
-
-            <div class="text-end fw-bold">
+            <!-- Display total for landscape -->
+            <div class="text-end fw-bold d-none d-md-table">
               Order Total: $<?= number_format($order['total'], 2) ?>
             </div>
           </div>
