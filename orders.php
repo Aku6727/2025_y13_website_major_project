@@ -63,7 +63,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 
   <div class="container py-5" style="margin-top:100px; margin-bottom:100px;">
     <h1 class="mb-4">Your Orders</h1>
-
+  <!-- If no orders are found -->
     <?php if (empty($orders)): ?>
       <p>You have no orders yet.</p>
     <?php else: ?>
@@ -90,9 +90,11 @@ while ($row = mysqli_fetch_assoc($res)) {
               >
                 <?php foreach ($order['items'] as $item): ?>
                   <li class="dropdown-item text-dark">
-                    <?= htmlspecialchars($item['prod_name']) ?>
+                    <a href="product.php?part_id=<?= $item['product_id'] ?>" class="text-dark">
+                      <?= htmlspecialchars($item['prod_name']) ?>
                     — Qty: <?= (int)$item['quant'] ?>
                     — $<?= number_format($item['subtotal'], 2) ?>
+                    </a>
                   </li>
                 <?php endforeach; ?>
               </ul>
