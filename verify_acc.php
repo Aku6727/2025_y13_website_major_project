@@ -78,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } else {
             echo "User not found.";
+            header("Location: account.php");
         }
     }
 }
