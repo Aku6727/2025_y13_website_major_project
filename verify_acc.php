@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_query($dbconnect, $query);
         
         if (!$result) {
+            header("Location: account.php");
             die("SQL error: " . mysqli_error($dbconnect));
         }
         if (mysqli_num_rows($result) === 1) {

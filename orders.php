@@ -11,24 +11,9 @@ $user_id = (int)$_SESSION['user_id'];
 
 // Prepare & run the query
 $sql = "
-  SELECT
-    o.id AS order_id,
-    p.id AS product_id,
-    p.prod_name,
-    pt.product_type,
-    m.manufacturer_name,
-    c.connection_type,
-    p.price,
-    pu.quant,
-    p.image
-  FROM orders o
-  JOIN purchased pu     ON o.id    = pu.order_id
-  JOIN products p       ON pu.prod_id = p.id
-  JOIN product_type pt  ON p.type_id  = pt.type_id
-  JOIN manufacturer m   ON p.manufacturer_id = m.manufacturer_id
-  JOIN connection c     ON p.connection_id   = c.connection_id
-  WHERE o.user_id = ($user_id)
-  ORDER BY o.id
+  SELECT o.id AS order_id, p.id AS product_id, p.prod_name, pt.product_type, m.manufacturer_name, c.connection_type, p.price, pu.quant, p.image
+  FROM orders o JOIN purchased pu     ON o.id    = pu.order_id JOIN products p       ON pu.prod_id = p.id JOIN product_type pt  ON p.type_id  = pt.type_id JOIN manufacturer m   ON p.manufacturer_id = m.manufacturer_id JOIN connection c     ON p.connection_id   = c.connection_id
+  WHERE o.user_id = ($user_id) ORDER BY o.id
 ";
 $res = mysqli_query($dbconnect, $sql);
 

@@ -62,7 +62,7 @@ include('navbar.php');
               <div class = "form-floating">
                 <form method="POST" action="add_to_cart.php">
                   <input type="hidden" name="prod_id" value="<?php echo $row['id']; ?>">
-                  <input type="number" name="qty" value="<?php echo $qty; ?>" min="0">
+                  <input type="number" name="qty" value="<?php echo $qty; ?>" min="0" max = "9999999999">
                   <button class="btn btn-outline-success btn-primary" type="submit">Update</button>
                 </form>
               </div>
