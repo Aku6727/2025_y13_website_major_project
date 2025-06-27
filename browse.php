@@ -78,8 +78,9 @@ if (!$query) {
 }
 
 $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error($dbconnect));
-?>
 
+$len_results = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,6 +99,7 @@ $result = mysqli_query($dbconnect, $query) or die('Query error: ' . mysqli_error
     <?php
     if ($searchTerm) {
         echo "Search results for '<em>" . htmlspecialchars($searchTerm) . "</em>'";
+        echo "Number of results '<em>" . htmlspecialchars($len_results) . "</em>'";
     } elseif (!empty($typeId)) {
         $nameRes = mysqli_query($dbconnect, "SELECT product_type FROM product_type WHERE type_id = $typeId");
         $typeName = mysqli_fetch_assoc($nameRes)['product_type'] ?? 'Category';
