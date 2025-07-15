@@ -98,12 +98,13 @@ $len_results = mysqli_num_rows($result);
   <h2 class="mb-4">
     <?php
     if ($searchTerm) {
-        echo "Search results for '<em>" . htmlspecialchars($searchTerm) . "</em>'";
-        echo "Number of results '<em>" . htmlspecialchars($len_results) . "</em>'";
+      echo "Search results for '<em>" . htmlspecialchars($searchTerm) . "</em>'<br>";
+      echo "Number of results: '<em>" . htmlspecialchars($len_results) . "</em>'";
     } elseif (!empty($typeId)) {
         $nameRes = mysqli_query($dbconnect, "SELECT product_type FROM product_type WHERE type_id = $typeId");
         $typeName = mysqli_fetch_assoc($nameRes)['product_type'] ?? 'Category';
-        echo "Category: <em>$typeName</em>";
+        echo "Category: <em>$typeName</em><br>";
+        echo "Number of results: <em>" . htmlspecialchars($len_results) . "</em>";
     } else {
         echo "All Products";
     }
