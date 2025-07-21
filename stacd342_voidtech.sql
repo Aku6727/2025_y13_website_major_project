@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 43.245.53.240:3306
--- Generation Time: Jun 18, 2025 at 11:15 AM
+-- Generation Time: Jul 21, 2025 at 02:17 PM
 -- Server version: 8.0.32
--- PHP Version: 7.3.14-1~deb10u1
+-- PHP Version: 7.3.31-1~deb10u3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -38,7 +38,14 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`id`, `user`, `pass`) VALUES
 (1, 'admin@voidtech.nz', '$2y$10$YDtM18wtvMNN89MTZLQU5er3BYmDQcHHWvMT0IOdrL9iySh.m9Njy'),
-(3, 'antkutovoy@gmail.com', '$2y$10$Hfkoj/o0vtUo8jLKFvlLZ.loLEvArtvP1PcvuE3ZlXgk5RXQAZ18q');
+(7, 'a@a.com', '$2y$10$0zEX.Hu9VWwcu85W2OyKF.VQ2ZHJnx.eSdgOCqzdGXaNOiK.HTkCy'),
+(8, 'y@i.i', '$2y$10$bj75lzHvPMTxK0tm/ucpKeWH6C/7FDeeVwx1wh0qmgGnGjn.U6pHe'),
+(9, 'kaelan@mail.com', '$2y$10$0qZONIhEoyia.vn.Pcgk5.RizZPIdC6puqfNarnduMq6dqE1PZoAa'),
+(10, 'anthony@gmail.com', '$2y$10$npbKDt15tNVwIA5Qq1Qs7.kuIOT4CUvpLNoV2fj89BbEdgIPQYLie'),
+(11, 'coolgays@gmail.com', '$2y$10$nygQAgrhFyyxrnHF4Ynr7OihPZp/my4AFEI4zeMOLOZShvgAibJ6y'),
+(12, 'asiflwneoiglv@w', '$2y$10$QfUvx7IZqDsA9Il1fLTlseWeGrUVWK6ULKglMA8LrCLE40sHszos6'),
+(13, 'gronk@gronk', '$2y$10$hEP95VzR3H7u2ObzzAo05upkZ3NdyydxjudpJhI5WInDR1Mxahs7m'),
+(14, 'test@a.a', '$2y$10$us/uj88rigALRkHh3HbbkO3nUE9jd3tipTFNuHvrUT9kDIunkPyRa');
 
 -- --------------------------------------------------------
 
@@ -101,10 +108,24 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`) VALUES
-(2, 1),
-(4, 1),
-(1, 3),
-(3, 3);
+(20, 1),
+(22, 1),
+(23, 1),
+(36, 1),
+(19, 7),
+(21, 7),
+(24, 8),
+(28, 9),
+(29, 9),
+(25, 10),
+(26, 10),
+(27, 10),
+(30, 11),
+(31, 11),
+(32, 13),
+(33, 14),
+(34, 14),
+(35, 14);
 
 -- --------------------------------------------------------
 
@@ -202,10 +223,21 @@ CREATE TABLE `purchased` (
 --
 
 INSERT INTO `purchased` (`id`, `order_id`, `prod_id`, `quant`) VALUES
-(1, 1, 1, 1),
-(2, 1, 8, 5),
-(3, 2, 4, 10),
-(4, 2, 7, 4);
+(24, 19, 17, 1),
+(25, 20, 17, 1),
+(26, 21, 8, 1),
+(27, 22, 17, 1),
+(28, 22, 9, 1),
+(29, 23, 17, 12),
+(30, 25, 4, 1),
+(31, 26, 8, 1),
+(32, 27, 23, 1),
+(33, 28, 17, 1),
+(34, 29, 2, 1),
+(35, 29, 21, 3),
+(36, 29, 14, 1),
+(37, 33, 17, -1),
+(38, 36, 1, 4);
 
 --
 -- Indexes for dumped tables
@@ -263,7 +295,7 @@ ALTER TABLE `purchased`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `connection`
 --
@@ -278,7 +310,7 @@ ALTER TABLE `manufacturer`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `products`
 --
@@ -288,7 +320,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `purchased`
 --
 ALTER TABLE `purchased`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- Constraints for dumped tables
 --
