@@ -24,6 +24,7 @@
           <div class="mb-3">
             <label for="user" class="form-label">Email</label>
             <input type="email" name="new_email" id="user" class="form-control form-control-lg" required>
+            <div id="emailHelp" class="form-text text-light">We'll never share your email.</div>
           </div>
           <?php
           if (isset($_GET['error'])){

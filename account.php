@@ -29,7 +29,7 @@
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" name="user" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-            <div id="emailHelp" class="form-text">We'll never share your email.</div>
+            <div id="emailHelp" class="form-text text-light">We'll never share your email.</div>
           </div>
           <div class="mb-4">
             <label for="exampleInputPassword1" class="form-label">Password</label>
